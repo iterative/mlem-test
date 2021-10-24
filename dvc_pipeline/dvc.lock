@@ -1,0 +1,90 @@
+schema: '2.0'
+stages:
+  generate_data:
+    cmd: python src/generate_data.py
+    deps:
+    - path: src/generate_data.py
+      md5: 461a96237cb07d1e92c60d4f3f5afa7e
+      size: 548
+    outs:
+    - path: data/test_x/artifacts
+      md5: d1baab7d5d4ea6ff57ee36d2e3593c69.dir
+      size: 809
+      nfiles: 1
+    - path: data/test_x/mlem.yaml
+      md5: f04f429213936fb5470c49703c01ad0e
+      size: 438
+    - path: data/test_y/artifacts
+      md5: e1a327814241a79adfccb262047c477a.dir
+      size: 214
+      nfiles: 1
+    - path: data/test_y/mlem.yaml
+      md5: 791c6a6c2024831425afe52814867355
+      size: 313
+    - path: data/train/artifacts
+      md5: 441b348cea911502dd050356e09b9a01.dir
+      size: 2464
+      nfiles: 1
+    - path: data/train/mlem.yaml
+      md5: 755c3d9be1edc55a28ee94ebb153071c
+      size: 462
+  train:
+    cmd: python src/train.py data/train data/model
+    deps:
+    - path: data/train
+      md5: 1584c3d7362c6efdf9e4bd5e74e65a84.dir
+      size: 2937
+      nfiles: 3
+    - path: src/train.py
+      md5: 2bb80c065990598550f7ae77ec11062d
+      size: 1044
+    params:
+      params.yaml:
+        train.min_split: 2
+        train.n_est: 50
+        train.seed: 20170428
+    outs:
+    - path: data/model/artifacts
+      md5: c363d9505da3746dd917423868262383.dir
+      size: 88011
+      nfiles: 1
+    - path: data/model/mlem.yaml
+      md5: e46d766b178b53b2b8559819b006604d
+      size: 2361
+  predict:
+    cmd: mlem apply latest data/test_x -m predict_proba -o data/pred
+    deps:
+    - path: data/model
+      md5: cbbcae26da43c7b7d319d917bb4c666c.dir
+      size: 90383
+      nfiles: 3
+    - path: data/test_x
+      md5: adabdb7d2fee1b06dfa1b6056ae2f3a4.dir
+      size: 1258
+      nfiles: 3
+    outs:
+    - path: data/pred/artifacts
+      md5: 6ae3a282c962c56d837eb75afee40bb3.dir
+      size: 354
+      nfiles: 1
+    - path: data/pred/mlem.yaml
+      md5: ac0c86458f040ab9d2230a25766d64c0
+      size: 241
+  score:
+    cmd: python src/score.py data/pred data/test_y scores.json
+    deps:
+    - path: data/pred
+      md5: 506f12597cff336d12bd7144aaf13d92.dir
+      size: 606
+      nfiles: 3
+    - path: data/test_y
+      md5: 969323d2b7c94f6980f127d8295a4eda.dir
+      size: 538
+      nfiles: 3
+    - path: src/score.py
+      md5: c15f2cbcb74ab4de4fc8bfffaf65c7bd
+      size: 666
+    outs:
+    - path: scores.json
+      md5: bd0299979bffde632d97a70887c050d6
+      size: 22

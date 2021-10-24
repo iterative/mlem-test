@@ -1,0 +1,118 @@
+artifacts:
+- uri: data/model/artifacts/data.pkl
+model_type:
+  methods:
+    predict:
+      args:
+      - name: data
+        type_:
+          columns:
+          - index
+          - sepal length (cm)
+          - sepal width (cm)
+          - petal length (cm)
+          - petal width (cm)
+          dtypes:
+          - int64
+          - float64
+          - float64
+          - float64
+          - float64
+          index_cols:
+          - index
+          type: dataframe
+      name: predict
+      returns:
+        dtype: int64
+        shape:
+        - null
+        type: ndarray
+    predict_proba:
+      args:
+      - name: data
+        type_:
+          columns:
+          - index
+          - sepal length (cm)
+          - sepal width (cm)
+          - petal length (cm)
+          - petal width (cm)
+          dtypes:
+          - int64
+          - float64
+          - float64
+          - float64
+          - float64
+          index_cols:
+          - index
+          type: dataframe
+      name: predict_proba
+      returns:
+        dtype: float64
+        shape:
+        - null
+        - 3
+        type: ndarray
+    sklearn_predict:
+      args:
+      - name: X
+        type_:
+          columns:
+          - index
+          - sepal length (cm)
+          - sepal width (cm)
+          - petal length (cm)
+          - petal width (cm)
+          dtypes:
+          - int64
+          - float64
+          - float64
+          - float64
+          - float64
+          index_cols:
+          - index
+          type: dataframe
+      name: predict
+      returns:
+        dtype: int64
+        shape:
+        - null
+        type: ndarray
+    sklearn_predict_proba:
+      args:
+      - name: X
+        type_:
+          columns:
+          - index
+          - sepal length (cm)
+          - sepal width (cm)
+          - petal length (cm)
+          - petal width (cm)
+          dtypes:
+          - int64
+          - float64
+          - float64
+          - float64
+          - float64
+          index_cols:
+          - index
+          type: dataframe
+      name: predict_proba
+      returns:
+        dtype: float64
+        shape:
+        - null
+        - 3
+        type: ndarray
+  type: sklearn
+object_type: model
+requirements:
+- module: sklearn
+  type: installable
+  version: '1.0'
+- module: numpy
+  type: installable
+  version: 1.21.2
+- module: pandas
+  type: installable
+  version: 1.3.3
