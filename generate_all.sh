@@ -1,0 +1,1 @@
+sh -c "cd simple && sh generate.sh"
