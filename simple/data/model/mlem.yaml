@@ -1,5 +1,5 @@
 artifacts:
-- uri: data/model/artifacts/data.pkl
+- uri: artifacts/data.pkl
 model_type:
   methods:
     predict:

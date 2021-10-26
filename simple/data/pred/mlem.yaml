@@ -1,5 +1,5 @@
 artifacts:
-- uri: data/pred/artifacts/data.npz
+- uri: artifacts/data.npz
 object_type: dataset
 reader:
   dataset_type:

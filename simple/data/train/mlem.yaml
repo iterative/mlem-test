@@ -1,5 +1,5 @@
 artifacts:
-- uri: data/train/artifacts/data.csv
+- uri: artifacts/data.csv
 object_type: dataset
 reader:
   dataset_type:
