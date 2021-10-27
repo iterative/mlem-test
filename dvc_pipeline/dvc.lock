@@ -12,28 +12,28 @@ stages:
       size: 809
       nfiles: 1
     - path: data/test_x/mlem.yaml
-      md5: f04f429213936fb5470c49703c01ad0e
+      md5: 2751a5078d553764dbaf898faf35f8f5
       size: 438
     - path: data/test_y/artifacts
       md5: e1a327814241a79adfccb262047c477a.dir
       size: 214
       nfiles: 1
     - path: data/test_y/mlem.yaml
-      md5: 791c6a6c2024831425afe52814867355
+      md5: 0232010fa698e5c195f1e8fb9400cc40
       size: 313
     - path: data/train/artifacts
       md5: 441b348cea911502dd050356e09b9a01.dir
       size: 2464
       nfiles: 1
     - path: data/train/mlem.yaml
-      md5: 755c3d9be1edc55a28ee94ebb153071c
-      size: 462
+      md5: f14ce5310e7483ab4deba7d63e772f50
+      size: 463
   train:
     cmd: python src/train.py data/train data/model
     deps:
     - path: data/train
-      md5: 1584c3d7362c6efdf9e4bd5e74e65a84.dir
-      size: 2937
+      md5: 33053e222c12c3ac59aeae3039f513d9.dir
+      size: 2938
       nfiles: 3
     - path: src/train.py
       md5: 2bb80c065990598550f7ae77ec11062d
@@ -49,17 +49,17 @@ stages:
       size: 88011
       nfiles: 1
     - path: data/model/mlem.yaml
-      md5: e46d766b178b53b2b8559819b006604d
-      size: 2361
+      md5: d003029f5a062720ada3153cbbe6479e
+      size: 2362
   predict:
     cmd: mlem apply latest data/test_x -m predict_proba -o data/pred
     deps:
     - path: data/model
-      md5: cbbcae26da43c7b7d319d917bb4c666c.dir
-      size: 90383
+      md5: a578f07de21149d2c8840d2cadcb9983.dir
+      size: 90384
       nfiles: 3
     - path: data/test_x
-      md5: adabdb7d2fee1b06dfa1b6056ae2f3a4.dir
+      md5: 50ada07e0ee50b126eccf6f4b676e5ae.dir
       size: 1258
       nfiles: 3
     outs:
@@ -68,17 +68,17 @@ stages:
       size: 354
       nfiles: 1
     - path: data/pred/mlem.yaml
-      md5: ac0c86458f040ab9d2230a25766d64c0
-      size: 241
+      md5: 398fcc29e29a6b71393a4d301341be2f
+      size: 243
   score:
     cmd: python src/score.py data/pred data/test_y scores.json
     deps:
     - path: data/pred
-      md5: 506f12597cff336d12bd7144aaf13d92.dir
-      size: 606
+      md5: 630324efcf5a0e0c7cf96112ca2e86ba.dir
+      size: 608
       nfiles: 3
     - path: data/test_y
-      md5: 969323d2b7c94f6980f127d8295a4eda.dir
+      md5: 0788b981fc929e817a1649f12ab9e103.dir
       size: 538
       nfiles: 3
     - path: src/score.py

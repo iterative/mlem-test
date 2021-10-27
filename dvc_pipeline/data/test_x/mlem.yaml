@@ -1,5 +1,6 @@
 artifacts:
-- uri: data/test_x/artifacts/data.csv
+- type: dvc
+  uri: artifacts/data.csv
 object_type: dataset
 reader:
   dataset_type:
