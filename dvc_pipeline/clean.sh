@@ -1,0 +1,1 @@
+rm -rf .mlem data .dvc .dvcignore dvc.yaml dvc.lock scores.json

@@ -1,0 +1,16 @@
+artifacts:
+- type: dvc
+  uri: artifacts/data.npz
+object_type: dataset
+reader:
+  dataset_type:
+    dtype: float64
+    shape:
+    - null
+    - 3
+    type: ndarray
+  type: numpy
+requirements:
+- module: numpy
+  type: installable
+  version: 1.21.2

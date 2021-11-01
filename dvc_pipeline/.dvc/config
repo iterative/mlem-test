@@ -1,0 +1,4 @@
+[core]
+    remote = s3store
+['remote "s3store"']
+    url = s3://mlem-test-dvc-pipeline
