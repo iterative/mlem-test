@@ -1,3 +1,4 @@
+link_data:
+  path: model/mlem.yaml
 link_type: model
-mlem_link: data/model/mlem.yaml
 object_type: link

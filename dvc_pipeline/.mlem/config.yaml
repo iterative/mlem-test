@@ -1,0 +1,3 @@
+DEFAULT_EXTERNAL: true
+DEFAULT_STORAGE:
+  type: dvc
