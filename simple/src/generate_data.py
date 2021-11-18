@@ -11,9 +11,9 @@ def main():
     data["target"] = y
     data.index.rename("index", inplace=True)
     train_data, test_data = train_test_split(data, random_state=42)
-    save(train_data, "train")
-    save(test_data.drop("target", axis=1), "test_x")
-    save(test_data[["target"]], "test_y")
+    save(train_data, "data/train")
+    save(test_data.drop("target", axis=1), "data/test_x")
+    save(test_data[["target"]], "data/test_y")
 
 
 if __name__ == "__main__":

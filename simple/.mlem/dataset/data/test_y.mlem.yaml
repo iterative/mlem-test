@@ -1,0 +1,4 @@
+link_data:
+  path: data/test_y/mlem.yaml
+link_type: dataset
+object_type: link
