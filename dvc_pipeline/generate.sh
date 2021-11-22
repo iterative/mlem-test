@@ -2,7 +2,9 @@ set -exu
 dvc init --subdir
 dvc remote add -d s3store s3://mlem-test-dvc-pipeline
 mlem init
-echo "default_storage: {\"type\":\"dvc\"}" > .mlem/config.yaml
+
+mlem config set -c DEFAULT_STORAGE.type=dvc -c DEFAULT_EXTERNAL=True
+
 dvc run -n generate_data \
   -d src/generate_data.py \
   -o data/train/artifacts -O data/train/mlem.yaml \
