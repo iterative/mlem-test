@@ -3,7 +3,7 @@ from mlem.core.objects import MlemLink
 
 def main():
     link = MlemLink(
-        path="first",
+        path="second",
         link_type="model"
     )
     link.dump("the_link")
