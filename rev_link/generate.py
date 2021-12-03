@@ -1,9 +1,9 @@
-from mlem.core.objects import LinkData, MlemLink
+from mlem.core.objects import MlemLink
 
 
 def main():
     link = MlemLink(
-        link_data=LinkData(path="second"),
+        path="first",
         link_type="model"
     )
     link.dump("the_link")
