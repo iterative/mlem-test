@@ -49,13 +49,13 @@ stages:
       size: 88011
       nfiles: 1
     - path: data/model/mlem.yaml
-      md5: 37e6802352ca1ea1c34d4c11df58af1a
+      md5: d003029f5a062720ada3153cbbe6479e
       size: 2362
   predict:
     cmd: mlem apply latest data/test_x -m predict_proba -o data/pred
     deps:
     - path: data/model
-      md5: 0ca07f9e955439cd1564d8a69a6b6ce6.dir
+      md5: a578f07de21149d2c8840d2cadcb9983.dir
       size: 90384
       nfiles: 3
     - path: data/test_x

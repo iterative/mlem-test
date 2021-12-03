@@ -1,4 +1,4 @@
-if [[ -z "${AWS_ACCESS_KEY}" ]]; then
+if [[ -z "${AWS_ACCESS_KEY_ID}" ]]; then
   echo "set s3 access env vars"
   exit 1
 fi
