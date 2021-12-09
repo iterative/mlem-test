@@ -1,0 +1,20 @@
+artifacts:
+- uri: artifacts/data.pkl
+model_type:
+  methods:
+    predict:
+      args:
+      - name: value
+        type_:
+          type: mlem.core.dataset_type.UnspecifiedDatasetType
+      name: predict
+      returns:
+        type: mlem.core.dataset_type.UnspecifiedDatasetType
+  type: custommodel
+object_type: model
+requirements:
+- is_package: false
+  module: model
+  name: model
+  source64zip: eJx1UUtOwzAQ3ecUo6ycYnKASEGgbugCigRig1DkOpNi6k9ku6AKcXdsJ21TCrOaOG/mfaazRoHf9UKvQajeWA83ekdhLplzz8xSWPZeGM1klnURqySqkhuLpTItyv3QXfy4NWZDh3axHJunXY8UHsVaM7+1qVW9xAfBNxIXyywUj1ww3zpvVJqpMgjVYge9xVZwTxzKjsIHk1sshr+xLIaVeniGC8hZ/te2qIBMtBykjpuCe6wOhqGGnKfh5C9PkMAg2iYC3QmSTGhokaDCVPsE6lOrZABcJ4EK/ZtpJz4NR+cIl46CWb1XUwMUHIuLmpZ5Vh0O8hIO9RpE3BsdXM1mm09m166Ay6tj8mdZ/c4lmawDI4VBkqu/8jH1vDrerYzHbwYICfByxBTfRfa/LeGagEXum5TgxF7QnpSujJFnIoUT2nmmOZKkLIyVkxMExh/wR+ZP
+  type: custom
