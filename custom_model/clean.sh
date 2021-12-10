@@ -1,0 +1,1 @@
+rm -rf custom_model .mlem

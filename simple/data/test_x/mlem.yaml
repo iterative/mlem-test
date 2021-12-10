@@ -1,5 +1,7 @@
 artifacts:
-- uri: artifacts/data.csv
+- hash: 5daacffbbe19f519310484a992208c58
+  size: 809
+  uri: artifacts/data.csv
 object_type: dataset
 reader:
   dataset_type:
