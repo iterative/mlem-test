@@ -1,5 +1,7 @@
 artifacts:
-- type: dvc
+- hash: 3e8ad4f382814eeb49f484f293f5fbd0
+  size: 354
+  type: dvc
   uri: artifacts/data.npz
 object_type: dataset
 reader:
