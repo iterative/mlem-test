@@ -12,28 +12,28 @@ stages:
       size: 809
       nfiles: 1
     - path: data/test_x/mlem.yaml
-      md5: 2751a5078d553764dbaf898faf35f8f5
-      size: 438
+      md5: 73bc7b29dcf65e25f9b007b601f17331
+      size: 491
     - path: data/test_y/artifacts
       md5: e1a327814241a79adfccb262047c477a.dir
       size: 214
       nfiles: 1
     - path: data/test_y/mlem.yaml
-      md5: 0232010fa698e5c195f1e8fb9400cc40
-      size: 313
+      md5: ff35c935f0752e4c64e9a95829d31d1c
+      size: 366
     - path: data/train/artifacts
       md5: 441b348cea911502dd050356e09b9a01.dir
       size: 2464
       nfiles: 1
     - path: data/train/mlem.yaml
-      md5: f14ce5310e7483ab4deba7d63e772f50
-      size: 463
+      md5: 27b0137d032a4ac67ff7be88d6918b02
+      size: 517
   train:
     cmd: python src/train.py data/train data/model
     deps:
     - path: data/train
-      md5: 33053e222c12c3ac59aeae3039f513d9.dir
-      size: 2938
+      md5: 39d6eec7eb93eec3cb9d7d6c293e9430.dir
+      size: 2992
       nfiles: 3
     - path: src/train.py
       md5: 2bb80c065990598550f7ae77ec11062d
@@ -49,18 +49,18 @@ stages:
       size: 88011
       nfiles: 1
     - path: data/model/mlem.yaml
-      md5: d003029f5a062720ada3153cbbe6479e
-      size: 2362
+      md5: dc3dd1678d1c61a6d1192e13c62285bf
+      size: 2417
   predict:
     cmd: mlem apply latest data/test_x -m predict_proba -o data/pred
     deps:
     - path: data/model
-      md5: a578f07de21149d2c8840d2cadcb9983.dir
-      size: 90384
+      md5: 0e5d3d3805dbc4694ca556c1cb7df7db.dir
+      size: 90439
       nfiles: 3
     - path: data/test_x
-      md5: 50ada07e0ee50b126eccf6f4b676e5ae.dir
-      size: 1258
+      md5: c2539d55b48ecd73ff6515169d645a47.dir
+      size: 1311
       nfiles: 3
     outs:
     - path: data/pred/artifacts
@@ -68,18 +68,18 @@ stages:
       size: 354
       nfiles: 1
     - path: data/pred/mlem.yaml
-      md5: 398fcc29e29a6b71393a4d301341be2f
-      size: 243
+      md5: f791763577518657269ea16d4b9c14c5
+      size: 296
   score:
     cmd: python src/score.py data/pred data/test_y scores.json
     deps:
     - path: data/pred
-      md5: 630324efcf5a0e0c7cf96112ca2e86ba.dir
-      size: 608
+      md5: 615905a1d4e9fd68f981689571b189ae.dir
+      size: 661
       nfiles: 3
     - path: data/test_y
-      md5: 0788b981fc929e817a1649f12ab9e103.dir
-      size: 538
+      md5: d952e99814c3843cf1dc9c3921acb0c2.dir
+      size: 591
       nfiles: 3
     - path: src/score.py
       md5: c15f2cbcb74ab4de4fc8bfffaf65c7bd

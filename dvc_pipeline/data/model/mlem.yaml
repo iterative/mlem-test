@@ -1,5 +1,7 @@
 artifacts:
-- type: dvc
+- hash: 96854b61410d2a66542315017aaf489c
+  size: 88011
+  type: dvc
   uri: artifacts/data.pkl
 model_type:
   methods:
