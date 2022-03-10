@@ -7,14 +7,14 @@ mlem config set -c DEFAULT_STORAGE.type=dvc -c DEFAULT_EXTERNAL=True
 
 dvc run -n generate_data \
   -d src/generate_data.py \
-  -o data/train -O data/train.mlem.yaml \
-  -o data/test_x -O data/test_x.mlem.yaml \
-  -o data/test_y -O data/test_y.mlem.yaml \
+  -o data/train -O data/train.mlem \
+  -o data/test_x -O data/test_x.mlem \
+  -o data/test_y -O data/test_y.mlem \
   python src/generate_data.py
 
 dvc run -n train \
   -d src/train.py -d data/train \
-  -o data/model -O data/model.mlem.yaml \
+  -o data/model -O data/model.mlem \
   -p train.min_split,train.n_est,train.seed \
   python src/train.py data/train data/model
 
@@ -22,7 +22,7 @@ mlem link data/model latest
 
 dvc run -n predict \
     -d data/model -d data/test_x \
-    -o data/pred -O data/pred.mlem.yaml \
+    -o data/pred -O data/pred.mlem \
     mlem apply latest data/test_x -m predict_proba -o data/pred
 
 dvc run -n score \

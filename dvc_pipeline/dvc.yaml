@@ -5,13 +5,13 @@ stages:
     - src/generate_data.py
     outs:
     - data/test_x
-    - data/test_x.mlem.yaml:
+    - data/test_x.mlem:
         cache: false
     - data/test_y
-    - data/test_y.mlem.yaml:
+    - data/test_y.mlem:
         cache: false
     - data/train
-    - data/train.mlem.yaml:
+    - data/train.mlem:
         cache: false
   train:
     cmd: python src/train.py data/train data/model
@@ -24,7 +24,7 @@ stages:
     - train.seed
     outs:
     - data/model
-    - data/model.mlem.yaml:
+    - data/model.mlem:
         cache: false
   predict:
     cmd: mlem apply latest data/test_x -m predict_proba -o data/pred
@@ -33,7 +33,7 @@ stages:
     - data/test_x
     outs:
     - data/pred
-    - data/pred.mlem.yaml:
+    - data/pred.mlem:
         cache: false
   score:
     cmd: python src/score.py data/pred data/test_y scores.json

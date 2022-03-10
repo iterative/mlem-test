@@ -10,19 +10,19 @@ stages:
     - path: data/test_x
       md5: 5daacffbbe19f519310484a992208c58
       size: 809
-    - path: data/test_x.mlem.yaml
+    - path: data/test_x.mlem
       md5: 766671010d4625b3f35ac0471e2bb90d
       size: 479
     - path: data/test_y
       md5: e8022b990ac942c1b6e60cc39d422287
       size: 214
-    - path: data/test_y.mlem.yaml
+    - path: data/test_y.mlem
       md5: 9ed1872c53aca0ba4dc77e52ec03e205
       size: 354
     - path: data/train
       md5: a219ca631b081ea1222a56fa5e65ddc4
       size: 2464
-    - path: data/train.mlem.yaml
+    - path: data/train.mlem
       md5: 8090c9547b3e04d954bad88bbff77a82
       size: 504
   train:
@@ -43,7 +43,7 @@ stages:
     - path: data/model
       md5: c250d4ecd5bedad1a2968a3bac813a0e
       size: 81807
-    - path: data/model.mlem.yaml
+    - path: data/model.mlem
       md5: b74744d886e03a04560b5ea88e0861b2
       size: 2404
   predict:
@@ -59,7 +59,7 @@ stages:
     - path: data/pred
       md5: 3e8ad4f382814eeb49f484f293f5fbd0
       size: 354
-    - path: data/pred.mlem.yaml
+    - path: data/pred.mlem
       md5: 94920bca8ee43c8eb4bd902bd8365c19
       size: 282
   score:

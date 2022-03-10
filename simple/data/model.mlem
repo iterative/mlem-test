@@ -112,9 +112,9 @@ requirements:
 - module: sklearn
   type: installable
   version: 1.0.2
-- module: pandas
-  type: installable
-  version: 1.4.0
 - module: numpy
   type: installable
   version: 1.22.2
+- module: pandas
+  type: installable
+  version: 1.4.0
