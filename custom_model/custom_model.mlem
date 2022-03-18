@@ -1,0 +1,22 @@
+artifacts:
+- hash: acd53a745fa42f607f13a4a146876026
+  size: 39
+  uri: custom_model
+model_type:
+  methods:
+    predict:
+      args:
+      - name: value
+        type_:
+          type: mlem.core.dataset_type.UnspecifiedDatasetType
+      name: predict
+      returns:
+        type: mlem.core.dataset_type.UnspecifiedDatasetType
+  type: custommodel
+object_type: model
+requirements:
+- is_package: false
+  module: model
+  name: model
+  source64zip: eJx9kU1OwzAQhfc+xSirpJgcIFIRqBu6gCKB2CAUuc4kmPonsl1Qhbg7tpO2KUV45TjfzLz3prVGgd/1QncgVG+shxu9o7CQzLlnZimsei+MZpKQNrJKoiq5sVgq06DcF93Fj1tjNnS4Llfj5WnXI4VH0WnmtzZdVS/xQfCNxOWKEMLjKFhsnTcqlVQEwmmwhd5iI7jPHcqWwgeTWyyGv/FYDB318AwXkLHsr25RQD6RclA6dgrmsTr4hTlkPBUne1lCwgTR1BF0J2Q+GUOLhApT7QMIwKnXvCCJuU4aFfo300ysGo7O5Vw6Cmb9Xk09UHAsdqob5ll1WMlLWNVrGHNvdDA2m20+me1cAZdXx+zP4vodTfI5DxMpDJLc/Csbg8+q4+bKuP56QPKAlyNTfP9nS7g6sMh9nUKc2Avak9K1MfJMpHBCO880xzwpC2XlZAsF+QGI/+aF
+  type: custom
