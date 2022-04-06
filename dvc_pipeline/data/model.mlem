@@ -1,8 +1,9 @@
 artifacts:
-- hash: c250d4ecd5bedad1a2968a3bac813a0e
-  size: 81807
-  type: dvc
-  uri: model
+  data:
+    hash: c250d4ecd5bedad1a2968a3bac813a0e
+    size: 81807
+    type: dvc
+    uri: model
 model_type:
   methods:
     predict:

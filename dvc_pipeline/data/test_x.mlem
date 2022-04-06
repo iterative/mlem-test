@@ -1,8 +1,9 @@
 artifacts:
-- hash: 5daacffbbe19f519310484a992208c58
-  size: 809
-  type: dvc
-  uri: test_x
+  data:
+    hash: 5daacffbbe19f519310484a992208c58
+    size: 809
+    type: dvc
+    uri: test_x
 object_type: dataset
 reader:
   dataset_type:

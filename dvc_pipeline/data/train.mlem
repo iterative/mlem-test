@@ -1,8 +1,9 @@
 artifacts:
-- hash: a219ca631b081ea1222a56fa5e65ddc4
-  size: 2464
-  type: dvc
-  uri: train
+  data:
+    hash: a219ca631b081ea1222a56fa5e65ddc4
+    size: 2464
+    type: dvc
+    uri: train
 object_type: dataset
 reader:
   dataset_type:

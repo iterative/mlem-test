@@ -1,7 +1,8 @@
 artifacts:
-- hash: 3e8ad4f382814eeb49f484f293f5fbd0
-  size: 354
-  uri: pred
+  data:
+    hash: 3e8ad4f382814eeb49f484f293f5fbd0
+    size: 354
+    uri: pred
 object_type: dataset
 reader:
   dataset_type:

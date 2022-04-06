@@ -1,7 +1,8 @@
 artifacts:
-- hash: acd53a745fa42f607f13a4a146876026
-  size: 39
-  uri: custom_model
+  data:
+    hash: acd53a745fa42f607f13a4a146876026
+    size: 39
+    uri: custom_model
 model_type:
   methods:
     predict:

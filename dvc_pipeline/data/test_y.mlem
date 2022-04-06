@@ -1,8 +1,9 @@
 artifacts:
-- hash: e8022b990ac942c1b6e60cc39d422287
-  size: 214
-  type: dvc
-  uri: test_y
+  data:
+    hash: e8022b990ac942c1b6e60cc39d422287
+    size: 214
+    type: dvc
+    uri: test_y
 object_type: dataset
 reader:
   dataset_type:
