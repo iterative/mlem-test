@@ -3,8 +3,8 @@ dvc init --subdir
 dvc remote add -d s3store s3://mlem-test-dvc-pipeline
 mlem init
 
-mlem config set DEFAULT_STORAGE.type dvc
-mlem config set DEFAULT_EXTERNAL True
+mlem config set core.storage.type dvc
+mlem config set core.external True
 
 dvc run -n generate_data \
   -d src/generate_data.py \

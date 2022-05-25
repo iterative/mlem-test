@@ -1,1 +1,2 @@
-DEFAULT_EXTERNAL: 'True'
+core:
+  external: 'True'

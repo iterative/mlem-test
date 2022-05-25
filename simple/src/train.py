@@ -38,7 +38,7 @@ def main():
 
     clf.fit(x, labels)
 
-    save(clf, output, tmp_sample_data=x)
+    save(clf, output, sample_data=x)
 
 
 if __name__ == "__main__":

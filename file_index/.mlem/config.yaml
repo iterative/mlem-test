@@ -1,0 +1,5 @@
+core:
+  index:
+    type: file
+index:
+  type: file
