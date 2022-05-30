@@ -9,10 +9,10 @@ model_type:
       args:
       - name: value
         type_:
-          type: mlem.core.dataset_type.UnspecifiedDatasetType
+          type: unspecified
       name: predict
       returns:
-        type: mlem.core.dataset_type.UnspecifiedDatasetType
+        type: unspecified
   type: custommodel
 object_type: model
 requirements:

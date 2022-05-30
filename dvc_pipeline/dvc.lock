@@ -11,20 +11,20 @@ stages:
       md5: 5daacffbbe19f519310484a992208c58
       size: 809
     - path: data/test_x.mlem
-      md5: 00496bbddb974d4be9d4690edc4add14
-      size: 495
+      md5: bbd0d796c042477e868de2d2c5031e8b
+      size: 697
     - path: data/test_y
       md5: e8022b990ac942c1b6e60cc39d422287
       size: 214
     - path: data/test_y.mlem
-      md5: f8302e756beef58a42d8579f51f047f0
-      size: 370
+      md5: b8239e32890452fe6119b7c832efea82
+      size: 459
     - path: data/train
       md5: a219ca631b081ea1222a56fa5e65ddc4
       size: 2464
     - path: data/train.mlem
-      md5: 5589f8a8da24c5f3942e5c0c6024faa5
-      size: 520
+      md5: 7163eadf63a37e7b59d084892a419d57
+      size: 743
   train:
     cmd: python src/train.py data/train data/model
     deps:
@@ -32,8 +32,8 @@ stages:
       md5: a219ca631b081ea1222a56fa5e65ddc4
       size: 2464
     - path: src/train.py
-      md5: 2bb80c065990598550f7ae77ec11062d
-      size: 1044
+      md5: 69095585787167829d98af78611c3e70
+      size: 1040
     params:
       params.yaml:
         train.min_split: 2
@@ -41,16 +41,16 @@ stages:
         train.seed: 20170428
     outs:
     - path: data/model
-      md5: c250d4ecd5bedad1a2968a3bac813a0e
+      md5: 4427a8e5be44d9e569a3c54c1061ed1e
       size: 81807
     - path: data/model.mlem
-      md5: f121a2fc14f5d283b55d250e5b58a74a
-      size: 2420
+      md5: 42b087c7defc457c9d534698c9da1348
+      size: 2360
   predict:
     cmd: mlem apply latest data/test_x -m predict_proba -o data/pred
     deps:
     - path: data/model
-      md5: c250d4ecd5bedad1a2968a3bac813a0e
+      md5: 4427a8e5be44d9e569a3c54c1061ed1e
       size: 81807
     - path: data/test_x
       md5: 5daacffbbe19f519310484a992208c58
@@ -60,8 +60,8 @@ stages:
       md5: 3e8ad4f382814eeb49f484f293f5fbd0
       size: 354
     - path: data/pred.mlem
-      md5: 1079a0bc6da2ddc91d81d94e4690edf4
-      size: 298
+      md5: 88241bea46869d1612810a8b07c9b73a
+      size: 340
   score:
     cmd: python src/score.py data/pred data/test_y scores.json
     deps:

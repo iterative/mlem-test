@@ -1,6 +1,6 @@
 artifacts:
   data:
-    hash: c250d4ecd5bedad1a2968a3bac813a0e
+    hash: 4427a8e5be44d9e569a3c54c1061ed1e
     size: 81807
     type: dvc
     uri: model
@@ -112,11 +112,8 @@ model_type:
 object_type: model
 requirements:
 - module: sklearn
-  type: installable
-  version: 1.0.2
-- module: numpy
-  type: installable
-  version: 1.22.2
+  version: 1.1.0
 - module: pandas
-  type: installable
   version: 1.4.0
+- module: numpy
+  version: 1.22.3

@@ -1,3 +1,4 @@
-DEFAULT_EXTERNAL: 'True'
-DEFAULT_STORAGE:
-  type: dvc
+core:
+  external: 'True'
+  storage:
+    type: dvc
