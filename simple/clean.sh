@@ -1,1 +1,1 @@
-rm -rf .mlem data
+rm -rf *.mlem* data

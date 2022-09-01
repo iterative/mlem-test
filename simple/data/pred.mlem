@@ -3,12 +3,6 @@ artifacts:
     hash: 3e8ad4f382814eeb49f484f293f5fbd0
     size: 354
     uri: pred
-data_type:
-  dtype: float64
-  shape:
-  - null
-  - 3
-  type: ndarray
 object_type: data
 reader:
   data_type:
@@ -20,4 +14,4 @@ reader:
   type: numpy
 requirements:
 - module: numpy
-  version: 1.22.3
+  version: 1.22.4

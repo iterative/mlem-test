@@ -4,12 +4,6 @@ artifacts:
     size: 354
     type: dvc
     uri: pred
-data_type:
-  dtype: float64
-  shape:
-  - null
-  - 3
-  type: ndarray
 object_type: data
 reader:
   data_type:
@@ -21,4 +15,4 @@ reader:
   type: numpy
 requirements:
 - module: numpy
-  version: 1.22.3
+  version: 1.22.4

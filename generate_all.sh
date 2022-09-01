@@ -6,4 +6,4 @@ fi
 sh -c "cd custom_model && sh generate.sh"
 sh -c "cd simple && sh generate.sh"
 sh -c "cd dvc_pipeline && sh generate.sh"
-sh -c "cd file_index && sh generate.sh"
+#sh -c "cd file_index && sh generate.sh"
