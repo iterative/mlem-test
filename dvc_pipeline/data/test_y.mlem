@@ -4,16 +4,6 @@ artifacts:
     size: 214
     type: dvc
     uri: test_y
-data_type:
-  columns:
-  - index
-  - target
-  dtypes:
-  - int64
-  - int64
-  index_cols:
-  - index
-  type: dataframe
 object_type: data
 reader:
   data_type:
@@ -30,4 +20,4 @@ reader:
   type: pandas
 requirements:
 - module: pandas
-  version: 1.4.0
+  version: 1.4.2

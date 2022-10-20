@@ -3,22 +3,6 @@ artifacts:
     hash: 5daacffbbe19f519310484a992208c58
     size: 809
     uri: test_x
-data_type:
-  columns:
-  - index
-  - sepal length (cm)
-  - sepal width (cm)
-  - petal length (cm)
-  - petal width (cm)
-  dtypes:
-  - int64
-  - float64
-  - float64
-  - float64
-  - float64
-  index_cols:
-  - index
-  type: dataframe
 object_type: data
 reader:
   data_type:
@@ -41,4 +25,4 @@ reader:
   type: pandas
 requirements:
 - module: pandas
-  version: 1.4.0
+  version: 1.4.2

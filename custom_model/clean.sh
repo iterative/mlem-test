@@ -1,1 +1,1 @@
-rm -rf custom_model custom_model.mlem .mlem
+rm -rf custom_model custom_model.mlem .mlem.yaml

@@ -11,20 +11,20 @@ stages:
       md5: 5daacffbbe19f519310484a992208c58
       size: 809
     - path: data/test_x.mlem
-      md5: bbd0d796c042477e868de2d2c5031e8b
-      size: 697
+      md5: f9d79d5cbdfc98c158bbd7d635b05c1d
+      size: 469
     - path: data/test_y
       md5: e8022b990ac942c1b6e60cc39d422287
       size: 214
     - path: data/test_y.mlem
-      md5: b8239e32890452fe6119b7c832efea82
-      size: 459
+      md5: d11941a0b644fb773bbdd244df9cee88
+      size: 344
     - path: data/train
       md5: a219ca631b081ea1222a56fa5e65ddc4
       size: 2464
     - path: data/train.mlem
-      md5: 7163eadf63a37e7b59d084892a419d57
-      size: 743
+      md5: 2af3e10ed5abebb57a77047fc42e4e8a
+      size: 494
   train:
     cmd: python src/train.py data/train data/model
     deps:
@@ -41,16 +41,16 @@ stages:
         train.seed: 20170428
     outs:
     - path: data/model
-      md5: 4427a8e5be44d9e569a3c54c1061ed1e
+      md5: 677d15b0f236adf4223a31e934d05f32
       size: 81807
     - path: data/model.mlem
-      md5: 42b087c7defc457c9d534698c9da1348
+      md5: a8404c3892c479e737e3b020454874bd
       size: 2360
   predict:
     cmd: mlem apply latest data/test_x -m predict_proba -o data/pred
     deps:
     - path: data/model
-      md5: 4427a8e5be44d9e569a3c54c1061ed1e
+      md5: 677d15b0f236adf4223a31e934d05f32
       size: 81807
     - path: data/test_x
       md5: 5daacffbbe19f519310484a992208c58
@@ -60,8 +60,8 @@ stages:
       md5: 3e8ad4f382814eeb49f484f293f5fbd0
       size: 354
     - path: data/pred.mlem
-      md5: 88241bea46869d1612810a8b07c9b73a
-      size: 340
+      md5: caa9d8d61438e3f80e532ebf314d66c0
+      size: 272
   score:
     cmd: python src/score.py data/pred data/test_y scores.json
     deps:
