@@ -3,18 +3,23 @@ artifacts:
     hash: acd53a745fa42f607f13a4a146876026
     size: 39
     uri: custom_model
-model_type:
-  methods:
-    predict:
-      args:
-      - name: value
-        type_:
-          type: unspecified
-      name: predict
-      returns:
-        type: unspecified
-  type: custommodel
+call_orders:
+  predict:
+  - - model
+    - predict
 object_type: model
+processors:
+  model:
+    methods:
+      predict:
+        args:
+        - name: value
+          type_:
+            type: unspecified
+        name: predict
+        returns:
+          type: unspecified
+    type: custommodel
 requirements:
 - is_package: false
   module: model
