@@ -11,19 +11,19 @@ stages:
       md5: 5daacffbbe19f519310484a992208c58
       size: 809
     - path: data/test_x.mlem
-      md5: f9d79d5cbdfc98c158bbd7d635b05c1d
+      md5: 12d6bba4c63d5b193e84cc18dfdc507d
       size: 469
     - path: data/test_y
       md5: e8022b990ac942c1b6e60cc39d422287
       size: 214
     - path: data/test_y.mlem
-      md5: d11941a0b644fb773bbdd244df9cee88
+      md5: b882648241f6647b6267bb4a1b167f4d
       size: 344
     - path: data/train
       md5: a219ca631b081ea1222a56fa5e65ddc4
       size: 2464
     - path: data/train.mlem
-      md5: 2af3e10ed5abebb57a77047fc42e4e8a
+      md5: b9372a55bc6b8a5b8dc7411b6713a087
       size: 494
   train:
     cmd: python src/train.py data/train data/model
@@ -41,16 +41,16 @@ stages:
         train.seed: 20170428
     outs:
     - path: data/model
-      md5: 677d15b0f236adf4223a31e934d05f32
+      md5: 1248322af79d22c5c1d1e847c3016a42
       size: 81807
     - path: data/model.mlem
-      md5: a8404c3892c479e737e3b020454874bd
-      size: 2360
+      md5: c7abb96df78c311bb5cfd5f16a03e2f4
+      size: 1524
   predict:
     cmd: mlem apply latest data/test_x -m predict_proba -o data/pred
     deps:
     - path: data/model
-      md5: 677d15b0f236adf4223a31e934d05f32
+      md5: 1248322af79d22c5c1d1e847c3016a42
       size: 81807
     - path: data/test_x
       md5: 5daacffbbe19f519310484a992208c58
